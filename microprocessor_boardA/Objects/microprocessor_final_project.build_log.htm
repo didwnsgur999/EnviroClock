@@ -1,0 +1,330 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: •ÏVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: JoonYoung Lee, Sogang University, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  E:\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DARMSTM.DLL V1.69.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+E:\projects\microprocessor_lab\microprocessor_final_project.uvprojx
+Project File Date:  06/20/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'E:\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+boardA_settingTimer.c(3): warning: In file included from...
+C:/Users/joonyoung/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/joonyoung/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/joonyoung/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+boardA_settingTimer.c(9): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void timer2_setting(){
+                   ^
+                    void
+boardA_settingTimer.c(10): warning: // comments are not allowed in this language [-Wcomment]
+        RCC->APB1ENR |= 0x1;            //tim2 clk enable
+                                        ^
+boardA_settingTimer.c(9): warning: no previous prototype for function 'timer2_setting' [-Wmissing-prototypes]
+void timer2_setting(){
+     ^
+boardA_settingTimer.c(9): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void timer2_setting(){
+^
+static 
+boardA_settingTimer.c(34): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+boardA_settingTimer.c(23): warning: no previous prototype for function 'TIM2_IRQHandler' [-Wmissing-prototypes]
+void TIM2_IRQHandler(void){
+     ^
+boardA_settingTimer.c(23): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM2_IRQHandler(void){
+^
+static 
+8 warnings generated.
+compiling boardA_settingTimer.c...
+boardA_main.c(1): warning: In file included from...
+C:/Users/joonyoung/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/joonyoung/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/joonyoung/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+boardA_main.c(4): warning: // comments are not allowed in this language [-Wcomment]
+// time 1, time_sel 2, temp_sel = 3, mode = 4, setting = 5 ,light 6, temp = 7, time_init = 8
+^
+boardA_main.c(19): warning: no previous extern declaration for non-static variable 'transfer_num' [-Wmissing-variable-declarations]
+int transfer_num = 0; // u32 --> 4send --> 1~4   usart transfer number
+    ^
+boardA_main.c(19): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int transfer_num = 0; // u32 --> 4send --> 1~4   usart transfer number
+^
+boardA_main.c(25): warning: implicit declaration of function 'flash_read' [-Wimplicit-function-declaration]
+        flash_read();
+        ^
+boardA_main.c(27): warning: implicit declaration of function 'USART1_Setting' [-Wimplicit-function-declaration]
+        USART1_Setting();       
+        ^
+boardA_main.c(29): warning: implicit declaration of function 'boardA_timer_setting' [-Wimplicit-function-declaration]
+        boardA_timer_setting();
+        ^
+boardA_main.c(30): warning: implicit declaration of function 'keymatrix_setting' [-Wimplicit-function-declaration]
+        keymatrix_setting();
+        ^
+boardA_main.c(31): warning: implicit declaration of function 'timer2_setting' [-Wimplicit-function-declaration]
+        timer2_setting();
+        ^
+boardA_main.c(32): warning: implicit declaration of function 'ADC_setting' [-Wimplicit-function-declaration]
+        ADC_setting();
+        ^
+boardA_main.c(33): warning: implicit declaration of function 'Usart_error_detector' [-Wimplicit-function-declaration]
+        Usart_error_detector();
+        ^
+boardA_main.c(6): warning: no previous extern declaration for non-static variable 'time' [-Wmissing-variable-declarations]
+int time;                       // time as seconds
+    ^
+boardA_main.c(6): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int time;                       // time as seconds
+^
+boardA_main.c(7): warning: no previous extern declaration for non-static variable 'time_sel' [-Wmissing-variable-declarations]
+u8 time_sel;    // 24 or 12 time
+   ^
+boardA_main.c(7): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+u8 time_sel;    // 24 or 12 time
+^
+boardA_main.c(8): warning: no previous extern declaration for non-static variable 'temp_sel' [-Wmissing-variable-declarations]
+u8 temp_sel;    // Celcius, Fahrenheit
+   ^
+boardA_main.c(8): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+u8 temp_sel;    // Celcius, Fahrenheit
+^
+boardA_main.c(9): warning: no previous extern declaration for non-static variable 'mode' [-Wmissing-variable-declarations]
+u8 mode;  // display mode 0 - time 1 - temp 2 - light
+   ^
+boardA_main.c(9): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+u8 mode;  // display mode 0 - time 1 - temp 2 - light
+^
+boardA_main.c(10): warning: no previous extern declaration for non-static variable 'setting' [-Wmissing-variable-declarations]
+u8 setting;             // setting enable
+   ^
+boardA_main.c(10): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+u8 setting;             // setting enable
+^
+boardA_main.c(11): warning: no previous extern declaration for non-static variable 'time_init' [-Wmissing-variable-declarations]
+u8 time_init;   // time_initial state
+   ^
+boardA_main.c(11): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+u8 time_init;   // time_initial state
+^
+boardA_main.c(12): warning: no previous extern declaration for non-static variable 'light' [-Wmissing-variable-declarations]
+u16 light;              // lux ADC
+    ^
+boardA_main.c(12): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+u16 light;              // lux ADC
+^
+boardA_main.c(13): warning: no previous extern declaration for non-static variable 'temp' [-Wmissing-variable-declarations]
+u16 temp;                       // temperature ADC
+    ^
+boardA_main.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+u16 temp;                       // temperature ADC
+^
+boardA_main.c(14): warning: no previous extern declaration for non-static variable 'lastmode' [-Wmissing-variable-declarations]
+u8 lastmode;  // after mode is changed
+   ^
+boardA_main.c(14): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+u8 lastmode;  // after mode is changed
+^
+boardA_main.c(15): warning: no previous extern declaration for non-static variable 'time_hour_min_sec' [-Wmissing-variable-declarations]
+u8 time_hour_min_sec; // setting hour min sec
+   ^
+boardA_main.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+u8 time_hour_min_sec; // setting hour min sec
+^
+boardA_main.c(16): warning: no previous extern declaration for non-static variable 'setting_mode' [-Wmissing-variable-declarations]
+u8 setting_mode ;                       // 0 : 24/12 setting  1 : time setting  2 : c/f setting
+   ^
+boardA_main.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+u8 setting_mode ;                       // 0 : 24/12 setting  1 : time setting  2 : c/f setting
+^
+boardA_main.c(17): warning: no previous extern declaration for non-static variable 'time_temp' [-Wmissing-variable-declarations]
+int time_temp;        // time_temporary_
+    ^
+boardA_main.c(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int time_temp;        // time_temporary_
+^
+boardA_main.c(20): warning: no previous extern declaration for non-static variable 'usart_err' [-Wmissing-variable-declarations]
+int usart_err; //variable represent Usart status
+    ^
+boardA_main.c(20): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int usart_err; //variable represent Usart status
+^
+25 warnings generated.
+compiling boardA_main.c...
+boardA_flash.c(1): warning: In file included from...
+C:/Users/joonyoung/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/joonyoung/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/joonyoung/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+boardA_flash.c(8): warning: // comments are not allowed in this language [-Wcomment]
+// programming
+^
+boardA_flash.c(10): warning: no previous prototype for function 'flash_unlock' [-Wmissing-prototypes]
+void flash_unlock(void){ // lock diasble
+     ^
+boardA_flash.c(10): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void flash_unlock(void){ // lock diasble
+^
+static 
+boardA_flash.c(18): warning: no previous prototype for function 'flash_erase' [-Wmissing-prototypes]
+void flash_erase(void){
+     ^
+boardA_flash.c(18): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void flash_erase(void){
+^
+static 
+boardA_flash.c(29): warning: no previous prototype for function 'flash_programming' [-Wmissing-prototypes]
+void flash_programming (void) { // data programming
+     ^
+boardA_flash.c(29): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void flash_programming (void) { // data programming
+^
+static 
+boardA_flash.c(46): warning: no previous prototype for function 'flash_read' [-Wmissing-prototypes]
+void flash_read (void){
+     ^
+boardA_flash.c(46): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void flash_read (void){
+^
+static 
+boardA_flash.c(6): warning: no previous extern declaration for non-static variable 'tmp1' [-Wmissing-variable-declarations]
+u8 tmp1,tmp2,tmp3;
+   ^
+boardA_flash.c(6): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+u8 tmp1,tmp2,tmp3;
+^
+boardA_flash.c(6): warning: no previous extern declaration for non-static variable 'tmp2' [-Wmissing-variable-declarations]
+u8 tmp1,tmp2,tmp3;
+        ^
+boardA_flash.c(6): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+u8 tmp1,tmp2,tmp3;
+^
+boardA_flash.c(6): warning: no previous extern declaration for non-static variable 'tmp3' [-Wmissing-variable-declarations]
+u8 tmp1,tmp2,tmp3;
+             ^
+boardA_flash.c(6): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+u8 tmp1,tmp2,tmp3;
+^
+11 warnings generated.
+compiling boardA_flash.c...
+boardA_key.c(1): warning: In file included from...
+C:/Users/joonyoung/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/joonyoung/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/joonyoung/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+boardA_key.c(2): warning: // comments are not allowed in this language [-Wcomment]
+//key scanning
+^
+boardA_key.c(21): warning: no previous prototype for function 'keymatrix_setting' [-Wmissing-prototypes]
+void keymatrix_setting(void){
+     ^
+boardA_key.c(21): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void keymatrix_setting(void){
+^
+static 
+boardA_key.c(43): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for(int i = 0; i<1000000; i++); //debouncing
+            ^
+boardA_key.c(43): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+boardA_key.c(42): warning: no previous prototype for function 'EXTI9_5_IRQHandler' [-Wmissing-prototypes]
+void EXTI9_5_IRQHandler(void){//mode, setting
+     ^
+boardA_key.c(42): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void EXTI9_5_IRQHandler(void){//mode, setting
+^
+static 
+boardA_key.c(84): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for(int i = 0; i<1000000; i++); //debouncing
+            ^
+boardA_key.c(84): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+boardA_key.c(128): warning: implicit declaration of function 'flash_programming' [-Wimplicit-function-declaration]
+                        flash_programming();
+                        ^
+boardA_key.c(83): warning: no previous prototype for function 'EXTI15_10_IRQHandler' [-Wmissing-prototypes]
+void EXTI15_10_IRQHandler(void){//up, ok
+     ^
+boardA_key.c(83): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void EXTI15_10_IRQHandler(void){//up, ok
+^
+static 
+12 warnings generated.
+compiling boardA_key.c...
+linking...
+Program Size: Code=4708 RO-data=252 RW-data=0 ZI-data=1672  
+".\Objects\microprocessor_final_project.axf" - 0 Error(s), 56 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.0.pack
+                Keil.STM32F1xx_DFP.2.4.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103RB
+  ./RTE/_Target_1
+  C:/Users/joonyoung/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/joonyoung/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device/Source/system_stm32f10x.c
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+Build Time Elapsed:  00:00:09
+</pre>
+</body>
+</html>
